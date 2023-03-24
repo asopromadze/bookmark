@@ -1,0 +1,249 @@
+{
+  "info": {
+    "_postman_id": "86ed83bf-2f6b-449a-a806-caaeadb63d1e",
+    "name": "nest-test",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/auth/signup",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["auth", "signup"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "signin",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/auth/signin",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["auth", "signin"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "me",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/users/me",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["users", "me"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "edit user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3333/users",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "bookmark",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"first bookmark\",\n    \"userId\": 1,\n    \"link\": \"test.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/bookmarks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["bookmarks"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "bookmark",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"title\": \"edited 123\",\n    \"link\": \"test.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/bookmarks/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["bookmarks", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "bookmarks",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/bookmarks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["bookmarks"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "bookmark",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/bookmarks/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["bookmarks", "1"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
